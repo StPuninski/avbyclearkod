@@ -49,22 +49,7 @@ public abstract class LoginPage extends BasePage{
         userNameInput.sendKeys(user.getUserName());
         passwordInput.sendKeys(user.getPassword());
         loginButton.click();
-        return new AvByPage(driver) {
-            @Override
-            public LoginPage openPage() {
-                return null;
-            }
-
-            @Override
-            public LoginPage isPageOpened() {
-                return null;
-            }
-
-            @Override
-            public void login(ChromeOptions chromeOptions) {
-
-            }
-        };
+        return new AvByPage(driver);
     }
 
     public abstract void login(ChromeOptions chromeOptions);

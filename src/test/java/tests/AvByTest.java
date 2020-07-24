@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
+import pages.AvByPage;
 import pages.SearchAutoPage;
 
 public class AvByTest extends BaseTest{
@@ -14,7 +15,16 @@ public class AvByTest extends BaseTest{
                 .login(user)
                 .clickSearchAuto()
                 .newSearch();
+
         ;
 
+    }
+
+    @Test
+
+    public void changeSettingProfile(){
+        AvByPage id2 = loginPage
+                .openPage()
+                .login(user);
     }
 }
